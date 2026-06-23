@@ -1,4 +1,4 @@
-import torch
+﻿import torch
 import pandas as pd
 from sklearn.utils import shuffle as reset
 from openprompt.data_utils import InputExample
@@ -23,36 +23,12 @@ def train_test_split(data, train_size=0.7, val_size=0.1, shuffle=True, random_st
     val = data[train_data_size:(train_data_size + val_data_size)].reset_index(drop=True)
     test = data[(train_data_size + val_data_size):].reset_index(drop=True)
 
-    # train = data[:int(len(data) * train_size)].reset_index(drop=True)
-    # val = data[int(len(data) * train_size):int(len(data) * (train_size + val_size))].reset_index(drop=True)
-    # test = data[int(len(data) * (train_size + val_size)):].reset_index(drop=True)
     return train, val, test
 
 def load_pre_lm(model_name, model_path, model_type='', temp_types='hard', mapping='v2'):
     plm, tokenizer, _, WrapperClass = load_plm(model_name, model_path)
 
-    # if model_type == 't5':
-    #     promptVerbalizer = ManualVerbalizer(
-    #         classes=classes,
-    #         label_words={
-    #             "0": ["no", "not", "zero"],
-    #             "1": ["long parameter list", "lpl", "Long Parameter List", "Lpl"],
-    #             "2": ["long method", "lm", "Long Method", "LM", "Lm"],
-    #             "3": ["long method and long parameter list", "Long Method and Long Parameter List", "two", "all"],
-    #         },
-    #         tokenizer=tokenizer,
-    #     )
-    #     promptTemplate = MixedTemplate(
-    #         model=plm,
-    #         tokenizer=tokenizer,
-    #         text=[
-    #             # 这是 Encoder 的输入部分
-    #             'The sentiment of this review: {"placeholder":"text_a", "shortenable": True} is ',
-    #             # 这是 Decoder 的输入部分，它会在这里生成答案
-    #             '{"mask"}.'
-    #         ]
-    #     )
-    # else:
+
     if temp_types == 'hard':
         promptTemplate = ManualTemplate(
             text='The method has {"mask"} code smell. {"placeholder":"text_a"}',
@@ -118,9 +94,8 @@ def read_data(file_path, shuffle=True, generalization=False):
         return traindataset, valdataset, testdataset
 
 if __name__ == '__main__':
-    file_path = '/home/lhy/storage/code/promptsmell/data/LM-LPL.json'
-    # read_data(file_path)
-
+    file_path = '../data/LM-LPL.json'
     model_name = 'roberta'
-    model_path = '/home/lhy/storage/code/promptsmell/pre_model/UniXcoder'
+    model_path = '../pre_model/UniXcoder'
     load_pre_lm(model_name, model_path)
+

@@ -1,4 +1,4 @@
-import os
+﻿import os
 import random
 os.environ['CUDA_VISIBLE_DEVICES'] = '2'
 os.environ['TORCH_DISTRIBUTED_DEBUG'] = 'DETAIL'
@@ -9,13 +9,12 @@ from openprompt import PromptDataLoader, PromptForClassification
 import logging
 import sys
 
-# generalization_results
-log_path = '/home/lhy/storage/code/promptsmell/results/# generalization_results.log'
-data_path = '/home/lhy/storage/code/promptsmell/data/test'
+log_path = '../results/generalization_results.log'
+data_path = '../data/test'
 model_name = 'roberta'
-model_path = '/home/lhy/storage/code/promptsmell/pre_model/UniXcoder'
-best_model_path = '/home/lhy/storage/code/promptsmell/save_dict/p1_v2_save_model.pth'
-save_path = '/home/lhy/storage/code/promptsmell/cm_results'
+model_path = '../pre_model/UniXcoder'
+best_model_path = '../save_dict/p1_v2_save_model.pth'
+save_path = '../cm_results'
 
 logging.basicConfig(
     level=logging.INFO,
@@ -63,5 +62,6 @@ for path in data_list:
 
     promptModel.load_state_dict(torch.load(best_model_path))
     promptModel.to(device)
-    test_accuracy, test_weighted_precision, test_weighted_recall, test_weighted_f1, avg_latency_ms, throughput_sps = test_val_model(
+    test_accuracy, test_weighted_precision, test_weighted_recall, test_weighted_f1 = test_val_model(
         promptModel, data_loader, device, best_val_f1=-1, types='test', is_save_cm=True, save_path=png_path)
+

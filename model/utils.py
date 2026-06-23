@@ -1,4 +1,4 @@
-from sklearn.metrics import (accuracy_score, precision_score, recall_score, f1_score,
+﻿from sklearn.metrics import (accuracy_score, precision_score, recall_score, f1_score,
                              classification_report, confusion_matrix, precision_recall_curve, auc)
 from pre_data import classes
 import matplotlib.pyplot as plt
@@ -14,9 +14,6 @@ def eval_results(y_true, y_pred, y_probs_positive):
 
     report = classification_report(y_true, y_pred, target_names=classes)
     cm = confusion_matrix(y_true, y_pred)
-    # precision, recall, _ = precision_recall_curve(y_true, y_probs_positive)
-    # pr_auc = auc(recall, precision)
-
     return accuracy, weighted_precision, weighted_recall, weighted_f1, report, cm
 
 def show_confusion_matrix(cm, save_path=None):
@@ -30,9 +27,6 @@ def show_confusion_matrix(cm, save_path=None):
     plt.xlabel('Predicted Label')
     plt.ylabel('True Label')
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
-    # plt.show()
-    
-
 def show_pr(precision, recall, pr_auc):
     plt.figure(figsize=(8, 6))
     plt.plot(recall, precision, color='b', label=f'PR curve (AUC = {pr_auc:.2f})')

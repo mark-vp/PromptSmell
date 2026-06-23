@@ -42,17 +42,6 @@ For the two-smell setting used in this repository, the mapping is:
 
 This mapping is consistent with the label space used by the prompt verbalizer and the downstream classifier.
 
-## Main Dataset Distribution
-
-The main dataset `LM-LPL.json` contains 6,985 method-level samples. Its label distribution is:
-
-| Label | Meaning | Samples | Percentage |
-| --- | --- | ---: | ---: |
-| `0` | No target smell | 2,526 | 36.16% |
-| `1` | Long Parameter List | 2,242 | 32.10% |
-| `2` | Long Method | 1,729 | 24.75% |
-| `3` | Both smells | 488 | 6.99% |
-
 
 ## Cross-Project Test Sets
 

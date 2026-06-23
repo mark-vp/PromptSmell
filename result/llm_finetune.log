@@ -1,0 +1,736 @@
+﻿2026-05-27 11:18:02,691 - INFO - Run name: llm_finetune
+2026-05-27 11:18:02,692 - INFO - Model path: pre_model/DeepSeek-Coder-1.3b-instruct
+2026-05-27 11:18:02,692 - INFO - Data path: data/LM-LPL.json
+2026-05-27 11:18:02,692 - INFO - Batch size: 4
+2026-05-27 11:18:02,692 - INFO - Epochs: 8
+2026-05-27 11:18:02,692 - INFO - Max seq length: 512
+2026-05-27 11:18:02,692 - INFO - LoRA rank: 16
+2026-05-27 11:18:02,692 - INFO - Learning rate: 0.0001
+2026-05-27 11:18:02,692 - INFO - Early stopping patience: 3
+2026-05-27 11:18:02,808 - INFO - Device: cuda
+2026-05-27 11:18:02,915 - INFO - Loading model for code-only SeqCls fine-tuning: pre_model/DeepSeek-Coder-1.3b-instruct
+2026-05-27 11:18:43,066 - INFO - Baseline type: code-only sequence-classification fine-tuning.
+2026-05-27 11:18:43,067 - INFO - Input contains raw Java method code only: no prompt, no label description, no examples.
+2026-05-27 11:23:21,423 - INFO - Epoch 1, Loss: 0.6406
+2026-05-27 11:23:21,423 - INFO - 
+--- eval ---
+2026-05-27 11:23:25,476 - INFO - 
+--- evaluation metrics ---
+2026-05-27 11:23:25,476 - INFO - Accuracy             : 0.9187
+2026-05-27 11:23:25,476 - INFO - Weighted Precision   : 0.9294
+2026-05-27 11:23:25,476 - INFO - Weighted Recall      : 0.9187
+2026-05-27 11:23:25,476 - INFO - Weighted F1-score    : 0.9213
+2026-05-27 11:23:25,476 - INFO - Macro F1-score       : 0.8820
+2026-05-27 11:23:25,476 - INFO - Class-3 F1-score     : 0.7407
+2026-05-27 11:23:25,476 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9730    0.9114    0.9412        79
+           1     0.9692    0.9000    0.9333        70
+           2     0.8704    0.9592    0.9126        49
+           3     0.6250    0.9091    0.7407        11
+
+    accuracy                         0.9187       209
+   macro avg     0.8594    0.9199    0.8820       209
+weighted avg     0.9294    0.9187    0.9213       209
+
+2026-05-27 11:23:25,476 - INFO - 
+--- confusion matrix ---
+[[72  1  6  0]
+ [ 1 63  1  5]
+ [ 1  0 47  1]
+ [ 0  1  0 10]]
+2026-05-27 11:23:30,909 - INFO - New best model saved with F1: 0.9213
+2026-05-27 11:27:57,189 - INFO - Epoch 2, Loss: 0.2412
+2026-05-27 11:27:57,189 - INFO - 
+--- eval ---
+2026-05-27 11:28:01,205 - INFO - 
+--- evaluation metrics ---
+2026-05-27 11:28:01,205 - INFO - Accuracy             : 0.9282
+2026-05-27 11:28:01,205 - INFO - Weighted Precision   : 0.9288
+2026-05-27 11:28:01,206 - INFO - Weighted Recall      : 0.9282
+2026-05-27 11:28:01,206 - INFO - Weighted F1-score    : 0.9258
+2026-05-27 11:28:01,206 - INFO - Macro F1-score       : 0.8710
+2026-05-27 11:28:01,206 - INFO - Class-3 F1-score     : 0.6667
+2026-05-27 11:28:01,206 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9733    0.9241    0.9481        79
+           1     0.9178    0.9571    0.9371        70
+           2     0.8889    0.9796    0.9320        49
+           3     0.8571    0.5455    0.6667        11
+
+    accuracy                         0.9282       209
+   macro avg     0.9093    0.8516    0.8710       209
+weighted avg     0.9288    0.9282    0.9258       209
+
+2026-05-27 11:28:01,206 - INFO - 
+--- confusion matrix ---
+[[73  1  5  0]
+ [ 1 67  1  1]
+ [ 1  0 48  0]
+ [ 0  5  0  6]]
+2026-05-27 11:28:08,383 - INFO - New best model saved with F1: 0.9258
+2026-05-27 11:32:35,355 - INFO - Epoch 3, Loss: 0.1321
+2026-05-27 11:32:35,355 - INFO - 
+--- eval ---
+2026-05-27 11:32:39,299 - INFO - 
+--- evaluation metrics ---
+2026-05-27 11:32:39,299 - INFO - Accuracy             : 0.9426
+2026-05-27 11:32:39,299 - INFO - Weighted Precision   : 0.9423
+2026-05-27 11:32:39,299 - INFO - Weighted Recall      : 0.9426
+2026-05-27 11:32:39,300 - INFO - Weighted F1-score    : 0.9411
+2026-05-27 11:32:39,300 - INFO - Macro F1-score       : 0.8981
+2026-05-27 11:32:39,300 - INFO - Class-3 F1-score     : 0.7368
+2026-05-27 11:32:39,300 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9740    0.9494    0.9615        79
+           1     0.9306    0.9571    0.9437        70
+           2     0.9231    0.9796    0.9505        49
+           3     0.8750    0.6364    0.7368        11
+
+    accuracy                         0.9426       209
+   macro avg     0.9257    0.8806    0.8981       209
+weighted avg     0.9423    0.9426    0.9411       209
+
+2026-05-27 11:32:39,300 - INFO - 
+--- confusion matrix ---
+[[75  1  3  0]
+ [ 1 67  1  1]
+ [ 1  0 48  0]
+ [ 0  4  0  7]]
+2026-05-27 11:32:46,040 - INFO - New best model saved with F1: 0.9411
+2026-05-27 11:37:12,060 - INFO - Epoch 4, Loss: 0.0580
+2026-05-27 11:37:12,061 - INFO - 
+--- eval ---
+2026-05-27 11:37:16,015 - INFO - 
+--- evaluation metrics ---
+2026-05-27 11:37:16,015 - INFO - Accuracy             : 0.9330
+2026-05-27 11:37:16,015 - INFO - Weighted Precision   : 0.9333
+2026-05-27 11:37:16,015 - INFO - Weighted Recall      : 0.9330
+2026-05-27 11:37:16,015 - INFO - Weighted F1-score    : 0.9317
+2026-05-27 11:37:16,015 - INFO - Macro F1-score       : 0.8894
+2026-05-27 11:37:16,015 - INFO - Class-3 F1-score     : 0.7368
+2026-05-27 11:37:16,015 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9610    0.9367    0.9487        79
+           1     0.9437    0.9571    0.9504        70
+           2     0.8868    0.9592    0.9216        49
+           3     0.8750    0.6364    0.7368        11
+
+    accuracy                         0.9330       209
+   macro avg     0.9166    0.8723    0.8894       209
+weighted avg     0.9333    0.9330    0.9317       209
+
+2026-05-27 11:37:16,015 - INFO - 
+--- confusion matrix ---
+[[74  0  5  0]
+ [ 1 67  1  1]
+ [ 2  0 47  0]
+ [ 0  4  0  7]]
+2026-05-27 11:37:16,016 - INFO - Early stopping counter: 1/3
+2026-05-27 11:41:41,444 - INFO - Epoch 5, Loss: 0.0229
+2026-05-27 11:41:41,444 - INFO - 
+--- eval ---
+2026-05-27 11:41:45,452 - INFO - 
+--- evaluation metrics ---
+2026-05-27 11:41:45,452 - INFO - Accuracy             : 0.9378
+2026-05-27 11:41:45,452 - INFO - Weighted Precision   : 0.9384
+2026-05-27 11:41:45,452 - INFO - Weighted Recall      : 0.9378
+2026-05-27 11:41:45,452 - INFO - Weighted F1-score    : 0.9377
+2026-05-27 11:41:45,452 - INFO - Macro F1-score       : 0.9200
+2026-05-27 11:41:45,452 - INFO - Class-3 F1-score     : 0.8571
+2026-05-27 11:41:45,452 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9605    0.9241    0.9419        79
+           1     0.9437    0.9571    0.9504        70
+           2     0.9038    0.9592    0.9307        49
+           3     0.9000    0.8182    0.8571        11
+
+    accuracy                         0.9378       209
+   macro avg     0.9270    0.9146    0.9200       209
+weighted avg     0.9384    0.9378    0.9377       209
+
+2026-05-27 11:41:45,453 - INFO - 
+--- confusion matrix ---
+[[73  2  4  0]
+ [ 1 67  1  1]
+ [ 2  0 47  0]
+ [ 0  2  0  9]]
+2026-05-27 11:41:45,453 - INFO - Early stopping counter: 2/3
+2026-05-27 11:46:10,980 - INFO - Epoch 6, Loss: 0.0073
+2026-05-27 11:46:10,980 - INFO - 
+--- eval ---
+2026-05-27 11:46:14,916 - INFO - 
+--- evaluation metrics ---
+2026-05-27 11:46:14,916 - INFO - Accuracy             : 0.9330
+2026-05-27 11:46:14,916 - INFO - Weighted Precision   : 0.9329
+2026-05-27 11:46:14,917 - INFO - Weighted Recall      : 0.9330
+2026-05-27 11:46:14,917 - INFO - Weighted F1-score    : 0.9316
+2026-05-27 11:46:14,917 - INFO - Macro F1-score       : 0.8900
+2026-05-27 11:46:14,917 - INFO - Class-3 F1-score     : 0.7368
+2026-05-27 11:46:14,917 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9610    0.9367    0.9487        79
+           1     0.9306    0.9571    0.9437        70
+           2     0.9038    0.9592    0.9307        49
+           3     0.8750    0.6364    0.7368        11
+
+    accuracy                         0.9330       209
+   macro avg     0.9176    0.8723    0.8900       209
+weighted avg     0.9329    0.9330    0.9316       209
+
+2026-05-27 11:46:14,917 - INFO - 
+--- confusion matrix ---
+[[74  1  4  0]
+ [ 1 67  1  1]
+ [ 2  0 47  0]
+ [ 0  4  0  7]]
+2026-05-27 11:46:14,917 - INFO - Early stopping counter: 3/3
+2026-05-27 11:46:14,917 - INFO - Early stopping triggered.
+2026-05-27 11:46:15,113 - INFO - 
+--- testing ---
+2026-05-27 11:46:46,067 - INFO - 
+--- evaluation metrics ---
+2026-05-27 11:46:46,067 - INFO - Accuracy             : 0.9338
+2026-05-27 11:46:46,067 - INFO - Weighted Precision   : 0.9332
+2026-05-27 11:46:46,067 - INFO - Weighted Recall      : 0.9338
+2026-05-27 11:46:46,067 - INFO - Weighted F1-score    : 0.9332
+2026-05-27 11:46:46,067 - INFO - Macro F1-score       : 0.9027
+2026-05-27 11:46:46,067 - INFO - Class-3 F1-score     : 0.7755
+2026-05-27 11:46:46,067 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9322    0.9677    0.9496       682
+           1     0.9343    0.9328    0.9336       610
+           2     0.9648    0.9399    0.9522       466
+           3     0.8190    0.7364    0.7755       129
+
+    accuracy                         0.9338      1887
+   macro avg     0.9126    0.8942    0.9027      1887
+weighted avg     0.9332    0.9338    0.9332      1887
+
+2026-05-27 11:46:46,068 - INFO - 
+--- confusion matrix ---
+[[660   9  13   0]
+ [ 20 569   1  20]
+ [ 25   2 438   1]
+ [  3  29   2  95]]
+2026-05-27 11:46:46,315 - INFO - Loading model for code-only SeqCls fine-tuning: pre_model/DeepSeek-Coder-1.3b-instruct
+2026-05-27 11:47:26,652 - INFO - Baseline type: code-only sequence-classification fine-tuning.
+2026-05-27 11:47:26,653 - INFO - Input contains raw Java method code only: no prompt, no label description, no examples.
+2026-05-27 11:52:04,880 - INFO - Epoch 1, Loss: 0.6302
+2026-05-27 11:52:04,880 - INFO - 
+--- eval ---
+2026-05-27 11:52:09,047 - INFO - 
+--- evaluation metrics ---
+2026-05-27 11:52:09,047 - INFO - Accuracy             : 0.8708
+2026-05-27 11:52:09,047 - INFO - Weighted Precision   : 0.8866
+2026-05-27 11:52:09,047 - INFO - Weighted Recall      : 0.8708
+2026-05-27 11:52:09,047 - INFO - Weighted F1-score    : 0.8736
+2026-05-27 11:52:09,047 - INFO - Macro F1-score       : 0.8293
+2026-05-27 11:52:09,047 - INFO - Class-3 F1-score     : 0.6667
+2026-05-27 11:52:09,047 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9846    0.8101    0.8889        79
+           1     0.8553    0.9286    0.8904        70
+           2     0.8462    0.8980    0.8713        49
+           3     0.5625    0.8182    0.6667        11
+
+    accuracy                         0.8708       209
+   macro avg     0.8121    0.8637    0.8293       209
+weighted avg     0.8866    0.8708    0.8736       209
+
+2026-05-27 11:52:09,047 - INFO - 
+--- confusion matrix ---
+[[64  8  7  0]
+ [ 1 65  1  3]
+ [ 0  1 44  4]
+ [ 0  2  0  9]]
+2026-05-27 11:52:14,602 - INFO - New best model saved with F1: 0.8736
+2026-05-27 11:56:42,647 - INFO - Epoch 2, Loss: 0.2543
+2026-05-27 11:56:42,647 - INFO - 
+--- eval ---
+2026-05-27 11:56:46,792 - INFO - 
+--- evaluation metrics ---
+2026-05-27 11:56:46,793 - INFO - Accuracy             : 0.8804
+2026-05-27 11:56:46,793 - INFO - Weighted Precision   : 0.8808
+2026-05-27 11:56:46,793 - INFO - Weighted Recall      : 0.8804
+2026-05-27 11:56:46,793 - INFO - Weighted F1-score    : 0.8745
+2026-05-27 11:56:46,793 - INFO - Macro F1-score       : 0.7963
+2026-05-27 11:56:46,793 - INFO - Class-3 F1-score     : 0.5000
+2026-05-27 11:56:46,793 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9000    0.9114    0.9057        79
+           1     0.9091    0.8571    0.8824        70
+           2     0.8276    0.9796    0.8972        49
+           3     0.8000    0.3636    0.5000        11
+
+    accuracy                         0.8804       209
+   macro avg     0.8592    0.7779    0.7963       209
+weighted avg     0.8808    0.8804    0.8745       209
+
+2026-05-27 11:56:46,793 - INFO - 
+--- confusion matrix ---
+[[72  1  6  0]
+ [ 7 60  2  1]
+ [ 1  0 48  0]
+ [ 0  5  2  4]]
+2026-05-27 11:56:53,552 - INFO - New best model saved with F1: 0.8745
+2026-05-27 12:01:19,510 - INFO - Epoch 3, Loss: 0.1363
+2026-05-27 12:01:19,511 - INFO - 
+--- eval ---
+2026-05-27 12:01:23,723 - INFO - 
+--- evaluation metrics ---
+2026-05-27 12:01:23,723 - INFO - Accuracy             : 0.9378
+2026-05-27 12:01:23,723 - INFO - Weighted Precision   : 0.9386
+2026-05-27 12:01:23,724 - INFO - Weighted Recall      : 0.9378
+2026-05-27 12:01:23,724 - INFO - Weighted F1-score    : 0.9365
+2026-05-27 12:01:23,724 - INFO - Macro F1-score       : 0.8935
+2026-05-27 12:01:23,724 - INFO - Class-3 F1-score     : 0.7368
+2026-05-27 12:01:23,724 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9737    0.9367    0.9548        79
+           1     0.9437    0.9571    0.9504        70
+           2     0.8889    0.9796    0.9320        49
+           3     0.8750    0.6364    0.7368        11
+
+    accuracy                         0.9378       209
+   macro avg     0.9203    0.8775    0.8935       209
+weighted avg     0.9386    0.9378    0.9365       209
+
+2026-05-27 12:01:23,724 - INFO - 
+--- confusion matrix ---
+[[74  1  4  0]
+ [ 1 67  1  1]
+ [ 1  0 48  0]
+ [ 0  3  1  7]]
+2026-05-27 12:01:31,358 - INFO - New best model saved with F1: 0.9365
+2026-05-27 12:05:57,924 - INFO - Epoch 4, Loss: 0.0491
+2026-05-27 12:05:57,924 - INFO - 
+--- eval ---
+2026-05-27 12:06:02,048 - INFO - 
+--- evaluation metrics ---
+2026-05-27 12:06:02,048 - INFO - Accuracy             : 0.9474
+2026-05-27 12:06:02,048 - INFO - Weighted Precision   : 0.9492
+2026-05-27 12:06:02,048 - INFO - Weighted Recall      : 0.9474
+2026-05-27 12:06:02,048 - INFO - Weighted F1-score    : 0.9458
+2026-05-27 12:06:02,048 - INFO - Macro F1-score       : 0.9102
+2026-05-27 12:06:02,048 - INFO - Class-3 F1-score     : 0.7778
+2026-05-27 12:06:02,048 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9740    0.9494    0.9615        79
+           1     0.9315    0.9714    0.9510        70
+           2     0.9231    0.9796    0.9505        49
+           3     1.0000    0.6364    0.7778        11
+
+    accuracy                         0.9474       209
+   macro avg     0.9572    0.8842    0.9102       209
+weighted avg     0.9492    0.9474    0.9458       209
+
+2026-05-27 12:06:02,049 - INFO - 
+--- confusion matrix ---
+[[75  1  3  0]
+ [ 1 68  1  0]
+ [ 1  0 48  0]
+ [ 0  4  0  7]]
+2026-05-27 12:06:08,717 - INFO - New best model saved with F1: 0.9458
+2026-05-27 12:10:34,996 - INFO - Epoch 5, Loss: 0.0204
+2026-05-27 12:10:34,996 - INFO - 
+--- eval ---
+2026-05-27 12:10:39,190 - INFO - 
+--- evaluation metrics ---
+2026-05-27 12:10:39,190 - INFO - Accuracy             : 0.9474
+2026-05-27 12:10:39,190 - INFO - Weighted Precision   : 0.9490
+2026-05-27 12:10:39,190 - INFO - Weighted Recall      : 0.9474
+2026-05-27 12:10:39,190 - INFO - Weighted F1-score    : 0.9474
+2026-05-27 12:10:39,190 - INFO - Macro F1-score       : 0.9270
+2026-05-27 12:10:39,190 - INFO - Class-3 F1-score     : 0.8571
+2026-05-27 12:10:39,190 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9737    0.9367    0.9548        79
+           1     0.9710    0.9571    0.9640        70
+           2     0.8889    0.9796    0.9320        49
+           3     0.9000    0.8182    0.8571        11
+
+    accuracy                         0.9474       209
+   macro avg     0.9334    0.9229    0.9270       209
+weighted avg     0.9490    0.9474    0.9474       209
+
+2026-05-27 12:10:39,191 - INFO - 
+--- confusion matrix ---
+[[74  0  5  0]
+ [ 1 67  1  1]
+ [ 1  0 48  0]
+ [ 0  2  0  9]]
+2026-05-27 12:10:46,274 - INFO - New best model saved with F1: 0.9474
+2026-05-27 12:15:12,907 - INFO - Epoch 6, Loss: 0.0082
+2026-05-27 12:15:12,907 - INFO - 
+--- eval ---
+2026-05-27 12:15:17,088 - INFO - 
+--- evaluation metrics ---
+2026-05-27 12:15:17,088 - INFO - Accuracy             : 0.9378
+2026-05-27 12:15:17,088 - INFO - Weighted Precision   : 0.9385
+2026-05-27 12:15:17,088 - INFO - Weighted Recall      : 0.9378
+2026-05-27 12:15:17,088 - INFO - Weighted F1-score    : 0.9373
+2026-05-27 12:15:17,088 - INFO - Macro F1-score       : 0.9069
+2026-05-27 12:15:17,089 - INFO - Class-3 F1-score     : 0.8000
+2026-05-27 12:15:17,089 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9610    0.9367    0.9487        79
+           1     0.9571    0.9571    0.9571        70
+           2     0.8868    0.9592    0.9216        49
+           3     0.8889    0.7273    0.8000        11
+
+    accuracy                         0.9378       209
+   macro avg     0.9235    0.8951    0.9069       209
+weighted avg     0.9385    0.9378    0.9373       209
+
+2026-05-27 12:15:17,089 - INFO - 
+--- confusion matrix ---
+[[74  0  5  0]
+ [ 1 67  1  1]
+ [ 2  0 47  0]
+ [ 0  3  0  8]]
+2026-05-27 12:15:17,089 - INFO - Early stopping counter: 1/3
+2026-05-27 12:19:38,814 - INFO - Epoch 7, Loss: 0.0037
+2026-05-27 12:19:38,814 - INFO - 
+--- eval ---
+2026-05-27 12:19:43,084 - INFO - 
+--- evaluation metrics ---
+2026-05-27 12:19:43,084 - INFO - Accuracy             : 0.9378
+2026-05-27 12:19:43,084 - INFO - Weighted Precision   : 0.9385
+2026-05-27 12:19:43,084 - INFO - Weighted Recall      : 0.9378
+2026-05-27 12:19:43,084 - INFO - Weighted F1-score    : 0.9373
+2026-05-27 12:19:43,084 - INFO - Macro F1-score       : 0.9069
+2026-05-27 12:19:43,084 - INFO - Class-3 F1-score     : 0.8000
+2026-05-27 12:19:43,084 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9610    0.9367    0.9487        79
+           1     0.9571    0.9571    0.9571        70
+           2     0.8868    0.9592    0.9216        49
+           3     0.8889    0.7273    0.8000        11
+
+    accuracy                         0.9378       209
+   macro avg     0.9235    0.8951    0.9069       209
+weighted avg     0.9385    0.9378    0.9373       209
+
+2026-05-27 12:19:43,084 - INFO - 
+--- confusion matrix ---
+[[74  0  5  0]
+ [ 1 67  1  1]
+ [ 2  0 47  0]
+ [ 0  3  0  8]]
+2026-05-27 12:19:43,085 - INFO - Early stopping counter: 2/3
+2026-05-27 12:24:02,806 - INFO - Epoch 8, Loss: 0.0019
+2026-05-27 12:24:02,806 - INFO - 
+--- eval ---
+2026-05-27 12:24:07,025 - INFO - 
+--- evaluation metrics ---
+2026-05-27 12:24:07,025 - INFO - Accuracy             : 0.9378
+2026-05-27 12:24:07,025 - INFO - Weighted Precision   : 0.9385
+2026-05-27 12:24:07,025 - INFO - Weighted Recall      : 0.9378
+2026-05-27 12:24:07,025 - INFO - Weighted F1-score    : 0.9373
+2026-05-27 12:24:07,025 - INFO - Macro F1-score       : 0.9069
+2026-05-27 12:24:07,025 - INFO - Class-3 F1-score     : 0.8000
+2026-05-27 12:24:07,025 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9610    0.9367    0.9487        79
+           1     0.9571    0.9571    0.9571        70
+           2     0.8868    0.9592    0.9216        49
+           3     0.8889    0.7273    0.8000        11
+
+    accuracy                         0.9378       209
+   macro avg     0.9235    0.8951    0.9069       209
+weighted avg     0.9385    0.9378    0.9373       209
+
+2026-05-27 12:24:07,026 - INFO - 
+--- confusion matrix ---
+[[74  0  5  0]
+ [ 1 67  1  1]
+ [ 2  0 47  0]
+ [ 0  3  0  8]]
+2026-05-27 12:24:07,026 - INFO - Early stopping counter: 3/3
+2026-05-27 12:24:07,026 - INFO - Early stopping triggered.
+2026-05-27 12:24:07,214 - INFO - 
+--- testing ---
+2026-05-27 12:24:38,136 - INFO - 
+--- evaluation metrics ---
+2026-05-27 12:24:38,136 - INFO - Accuracy             : 0.9396
+2026-05-27 12:24:38,136 - INFO - Weighted Precision   : 0.9391
+2026-05-27 12:24:38,136 - INFO - Weighted Recall      : 0.9396
+2026-05-27 12:24:38,136 - INFO - Weighted F1-score    : 0.9393
+2026-05-27 12:24:38,136 - INFO - Macro F1-score       : 0.9098
+2026-05-27 12:24:38,136 - INFO - Class-3 F1-score     : 0.7857
+2026-05-27 12:24:38,136 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9520    0.9604    0.9562       682
+           1     0.9389    0.9328    0.9359       610
+           2     0.9574    0.9657    0.9615       466
+           3     0.8049    0.7674    0.7857       129
+
+    accuracy                         0.9396      1887
+   macro avg     0.9133    0.9066    0.9098      1887
+weighted avg     0.9391    0.9396    0.9393      1887
+
+2026-05-27 12:24:38,136 - INFO - 
+--- confusion matrix ---
+[[655  10  17   0]
+ [ 18 569   1  22]
+ [ 12   2 450   2]
+ [  3  25   2  99]]
+2026-05-27 12:24:38,669 - INFO - Loading model for code-only SeqCls fine-tuning: pre_model/DeepSeek-Coder-1.3b-instruct
+2026-05-27 12:25:18,869 - INFO - Baseline type: code-only sequence-classification fine-tuning.
+2026-05-27 12:25:18,870 - INFO - Input contains raw Java method code only: no prompt, no label description, no examples.
+2026-05-27 12:29:52,211 - INFO - Epoch 1, Loss: 0.6443
+2026-05-27 12:29:52,211 - INFO - 
+--- eval ---
+2026-05-27 12:29:56,265 - INFO - 
+--- evaluation metrics ---
+2026-05-27 12:29:56,265 - INFO - Accuracy             : 0.8852
+2026-05-27 12:29:56,265 - INFO - Weighted Precision   : 0.8994
+2026-05-27 12:29:56,265 - INFO - Weighted Recall      : 0.8852
+2026-05-27 12:29:56,265 - INFO - Weighted F1-score    : 0.8888
+2026-05-27 12:29:56,265 - INFO - Macro F1-score       : 0.8366
+2026-05-27 12:29:56,265 - INFO - Class-3 F1-score     : 0.6429
+2026-05-27 12:29:56,265 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9726    0.8987    0.9342        79
+           1     0.9062    0.8286    0.8657        70
+           2     0.8545    0.9592    0.9038        49
+           3     0.5294    0.8182    0.6429        11
+
+    accuracy                         0.8852       209
+   macro avg     0.8157    0.8762    0.8366       209
+weighted avg     0.8994    0.8852    0.8888       209
+
+2026-05-27 12:29:56,266 - INFO - 
+--- confusion matrix ---
+[[71  3  5  0]
+ [ 1 58  3  8]
+ [ 1  1 47  0]
+ [ 0  2  0  9]]
+2026-05-27 12:30:01,129 - INFO - New best model saved with F1: 0.8888
+2026-05-27 12:34:24,569 - INFO - Epoch 2, Loss: 0.2450
+2026-05-27 12:34:24,570 - INFO - 
+--- eval ---
+2026-05-27 12:34:28,642 - INFO - 
+--- evaluation metrics ---
+2026-05-27 12:34:28,642 - INFO - Accuracy             : 0.9139
+2026-05-27 12:34:28,642 - INFO - Weighted Precision   : 0.9164
+2026-05-27 12:34:28,642 - INFO - Weighted Recall      : 0.9139
+2026-05-27 12:34:28,642 - INFO - Weighted F1-score    : 0.9146
+2026-05-27 12:34:28,642 - INFO - Macro F1-score       : 0.8675
+2026-05-27 12:34:28,642 - INFO - Class-3 F1-score     : 0.6957
+2026-05-27 12:34:28,642 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9600    0.9114    0.9351        79
+           1     0.9286    0.9286    0.9286        70
+           2     0.8846    0.9388    0.9109        49
+           3     0.6667    0.7273    0.6957        11
+
+    accuracy                         0.9139       209
+   macro avg     0.8600    0.8765    0.8675       209
+weighted avg     0.9164    0.9139    0.9146       209
+
+2026-05-27 12:34:28,643 - INFO - 
+--- confusion matrix ---
+[[72  2  5  0]
+ [ 1 65  1  3]
+ [ 2  0 46  1]
+ [ 0  3  0  8]]
+2026-05-27 12:34:35,316 - INFO - New best model saved with F1: 0.9146
+2026-05-27 12:39:00,815 - INFO - Epoch 3, Loss: 0.1399
+2026-05-27 12:39:00,815 - INFO - 
+--- eval ---
+2026-05-27 12:39:04,880 - INFO - 
+--- evaluation metrics ---
+2026-05-27 12:39:04,880 - INFO - Accuracy             : 0.9426
+2026-05-27 12:39:04,880 - INFO - Weighted Precision   : 0.9484
+2026-05-27 12:39:04,880 - INFO - Weighted Recall      : 0.9426
+2026-05-27 12:39:04,880 - INFO - Weighted F1-score    : 0.9435
+2026-05-27 12:39:04,880 - INFO - Macro F1-score       : 0.9192
+2026-05-27 12:39:04,880 - INFO - Class-3 F1-score     : 0.8333
+2026-05-27 12:39:04,880 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9865    0.9241    0.9542        79
+           1     0.9848    0.9286    0.9559        70
+           2     0.8750    1.0000    0.9333        49
+           3     0.7692    0.9091    0.8333        11
+
+    accuracy                         0.9426       209
+   macro avg     0.9039    0.9404    0.9192       209
+weighted avg     0.9484    0.9426    0.9435       209
+
+2026-05-27 12:39:04,881 - INFO - 
+--- confusion matrix ---
+[[73  0  6  0]
+ [ 1 65  1  3]
+ [ 0  0 49  0]
+ [ 0  1  0 10]]
+2026-05-27 12:39:11,369 - INFO - New best model saved with F1: 0.9435
+2026-05-27 12:43:35,515 - INFO - Epoch 4, Loss: 0.0540
+2026-05-27 12:43:35,515 - INFO - 
+--- eval ---
+2026-05-27 12:43:39,575 - INFO - 
+--- evaluation metrics ---
+2026-05-27 12:43:39,575 - INFO - Accuracy             : 0.9378
+2026-05-27 12:43:39,575 - INFO - Weighted Precision   : 0.9373
+2026-05-27 12:43:39,575 - INFO - Weighted Recall      : 0.9378
+2026-05-27 12:43:39,575 - INFO - Weighted F1-score    : 0.9371
+2026-05-27 12:43:39,575 - INFO - Macro F1-score       : 0.9081
+2026-05-27 12:43:39,575 - INFO - Class-3 F1-score     : 0.8000
+2026-05-27 12:43:39,575 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9375    0.9494    0.9434        79
+           1     0.9437    0.9571    0.9504        70
+           2     0.9388    0.9388    0.9388        49
+           3     0.8889    0.7273    0.8000        11
+
+    accuracy                         0.9378       209
+   macro avg     0.9272    0.8931    0.9081       209
+weighted avg     0.9373    0.9378    0.9371       209
+
+2026-05-27 12:43:39,576 - INFO - 
+--- confusion matrix ---
+[[75  1  3  0]
+ [ 2 67  0  1]
+ [ 3  0 46  0]
+ [ 0  3  0  8]]
+2026-05-27 12:43:39,576 - INFO - Early stopping counter: 1/3
+2026-05-27 12:48:03,486 - INFO - Epoch 5, Loss: 0.0173
+2026-05-27 12:48:03,487 - INFO - 
+--- eval ---
+2026-05-27 12:48:07,586 - INFO - 
+--- evaluation metrics ---
+2026-05-27 12:48:07,586 - INFO - Accuracy             : 0.9378
+2026-05-27 12:48:07,586 - INFO - Weighted Precision   : 0.9382
+2026-05-27 12:48:07,586 - INFO - Weighted Recall      : 0.9378
+2026-05-27 12:48:07,586 - INFO - Weighted F1-score    : 0.9379
+2026-05-27 12:48:07,586 - INFO - Macro F1-score       : 0.9305
+2026-05-27 12:48:07,587 - INFO - Class-3 F1-score     : 0.9091
+2026-05-27 12:48:07,587 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9481    0.9241    0.9359        79
+           1     0.9571    0.9571    0.9571        70
+           2     0.9020    0.9388    0.9200        49
+           3     0.9091    0.9091    0.9091        11
+
+    accuracy                         0.9378       209
+   macro avg     0.9291    0.9323    0.9305       209
+weighted avg     0.9382    0.9378    0.9379       209
+
+2026-05-27 12:48:07,587 - INFO - 
+--- confusion matrix ---
+[[73  2  4  0]
+ [ 1 67  1  1]
+ [ 3  0 46  0]
+ [ 0  1  0 10]]
+2026-05-27 12:48:07,587 - INFO - Early stopping counter: 2/3
+2026-05-27 12:52:30,915 - INFO - Epoch 6, Loss: 0.0143
+2026-05-27 12:52:30,915 - INFO - 
+--- eval ---
+2026-05-27 12:52:35,047 - INFO - 
+--- evaluation metrics ---
+2026-05-27 12:52:35,048 - INFO - Accuracy             : 0.9378
+2026-05-27 12:52:35,048 - INFO - Weighted Precision   : 0.9392
+2026-05-27 12:52:35,048 - INFO - Weighted Recall      : 0.9378
+2026-05-27 12:52:35,048 - INFO - Weighted F1-score    : 0.9379
+2026-05-27 12:52:35,048 - INFO - Macro F1-score       : 0.9307
+2026-05-27 12:52:35,048 - INFO - Class-3 F1-score     : 0.9091
+2026-05-27 12:52:35,048 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9600    0.9114    0.9351        79
+           1     0.9571    0.9571    0.9571        70
+           2     0.8868    0.9592    0.9216        49
+           3     0.9091    0.9091    0.9091        11
+
+    accuracy                         0.9378       209
+   macro avg     0.9283    0.9342    0.9307       209
+weighted avg     0.9392    0.9378    0.9379       209
+
+2026-05-27 12:52:35,048 - INFO - 
+--- confusion matrix ---
+[[72  2  5  0]
+ [ 1 67  1  1]
+ [ 2  0 47  0]
+ [ 0  1  0 10]]
+2026-05-27 12:52:35,048 - INFO - Early stopping counter: 3/3
+2026-05-27 12:52:35,048 - INFO - Early stopping triggered.
+2026-05-27 12:52:35,351 - INFO - 
+--- testing ---
+2026-05-27 12:53:06,589 - INFO - 
+--- evaluation metrics ---
+2026-05-27 12:53:06,589 - INFO - Accuracy             : 0.9316
+2026-05-27 12:53:06,589 - INFO - Weighted Precision   : 0.9335
+2026-05-27 12:53:06,589 - INFO - Weighted Recall      : 0.9316
+2026-05-27 12:53:06,589 - INFO - Weighted F1-score    : 0.9321
+2026-05-27 12:53:06,589 - INFO - Macro F1-score       : 0.9023
+2026-05-27 12:53:06,589 - INFO - Class-3 F1-score     : 0.7766
+2026-05-27 12:53:06,589 - INFO - 
+--- classification report ---
+              precision    recall  f1-score   support
+
+           0     0.9422    0.9560    0.9491       682
+           1     0.9565    0.9016    0.9283       610
+           2     0.9454    0.9657    0.9554       466
+           3     0.7361    0.8217    0.7766       129
+
+    accuracy                         0.9316      1887
+   macro avg     0.8951    0.9113    0.9023      1887
+weighted avg     0.9335    0.9316    0.9321      1887
+
+2026-05-27 12:53:06,590 - INFO - 
+--- confusion matrix ---
+[[652   6  24   0]
+ [ 25 550   0  35]
+ [ 12   1 450   3]
+ [  3  18   2 106]]
+2026-05-27 12:53:07,043 - INFO - 
+==================== final results ====================
+2026-05-27 12:53:07,045 - INFO - Accuracy           : 0.9350 +/- 0.0034
+2026-05-27 12:53:07,045 - INFO - Weighted Precision : 0.9353 +/- 0.0027
+2026-05-27 12:53:07,046 - INFO - Weighted Recall    : 0.9350 +/- 0.0034
+2026-05-27 12:53:07,046 - INFO - Weighted F1-score  : 0.9349 +/- 0.0032
+

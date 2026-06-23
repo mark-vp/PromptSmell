@@ -1,0 +1,138 @@
+﻿Connected to pydev debugger (build 241.14494.241)
+  warnings.warn(
+Using GPU: NVIDIA GeForce RTX 3090
+------------ PMD1.json ------------
+tokenizing: 14427it [01:09, 207.08it/s]
+
+--- 璇勪及鎸囨爣 ---
+鍑嗙‘鐜?(Accuracy)              : 93.87%
+鍔犳潈鏌ュ噯鐜?(Weighted Precision): 0.9925
+鍔犳潈鏌ュ叏鐜?(Weighted Recall)   : 0.9387
+鍔犳潈F1鍒嗘暟 (Weighted F1-score) : 0.9627
+--- 鍒嗙被鎶ュ憡 (Classification Report) ---
+              precision    recall  f1-score   support
+
+           0       1.00      0.94      0.97     14298
+           1       0.21      0.90      0.35       124
+           2       0.01      0.80      0.02         5
+           3       0.00      0.00      0.00         0
+
+    accuracy                           0.94     14427
+   macro avg       0.31      0.66      0.33     14427
+weighted avg       0.99      0.94      0.96     14427
+
+
+--- 娣锋穯鐭╅樀 (Confusion Matrix) ---
+------------ Drjava1.json ------------
+tokenizing: 19825it [01:50, 180.05it/s]
+
+--- 璇勪及鎸囨爣 ---
+鍑嗙‘鐜?(Accuracy)              : 91.23%
+鍔犳潈鏌ュ噯鐜?(Weighted Precision): 0.9856
+鍔犳潈鏌ュ叏鐜?(Weighted Recall)   : 0.9123
+鍔犳潈F1鍒嗘暟 (Weighted F1-score) : 0.9439
+--- 鍒嗙被鎶ュ憡 (Classification Report) ---
+              precision    recall  f1-score   support
+
+           0       1.00      0.91      0.95     19534
+           1       0.17      0.85      0.28       225
+           2       0.04      0.56      0.08        62
+           3       0.04      0.25      0.07         4
+
+    accuracy                           0.91     19825
+   macro avg       0.31      0.64      0.35     19825
+weighted avg       0.99      0.91      0.94     19825
+
+
+--- 娣锋穯鐭╅樀 (Confusion Matrix) ---
+------------ JGroups1.json ------------
+tokenizing: 12432it [01:02, 198.01it/s]
+
+--- 璇勪及鎸囨爣 ---
+鍑嗙‘鐜?(Accuracy)              : 90.89%
+鍔犳潈鏌ュ噯鐜?(Weighted Precision): 0.9745
+鍔犳潈鏌ュ叏鐜?(Weighted Recall)   : 0.9089
+鍔犳潈F1鍒嗘暟 (Weighted F1-score) : 0.9355
+--- 鍒嗙被鎶ュ憡 (Classification Report) ---
+              precision    recall  f1-score   support
+
+           0       1.00      0.91      0.95     12086
+           1       0.12      0.92      0.22        88
+           2       0.29      0.77      0.42       250
+           3       0.23      0.62      0.33         8
+
+    accuracy                           0.91     12432
+   macro avg       0.41      0.81      0.48     12432
+weighted avg       0.97      0.91      0.94     12432
+
+
+--- 娣锋穯鐭╅樀 (Confusion Matrix) ---
+------------ Filecrush1.json ------------
+tokenizing: 367it [00:02, 135.37it/s]
+
+--- 璇勪及鎸囨爣 ---
+鍑嗙‘鐜?(Accuracy)              : 93.46%
+鍔犳潈鏌ュ噯鐜?(Weighted Precision): 0.9835
+鍔犳潈鏌ュ叏鐜?(Weighted Recall)   : 0.9346
+鍔犳潈F1鍒嗘暟 (Weighted F1-score) : 0.9584
+--- 鍒嗙被鎶ュ憡 (Classification Report) ---
+              precision    recall  f1-score   support
+
+           0       1.00      0.95      0.97       354
+           1       0.00      0.00      0.00         0
+           2       0.64      0.64      0.64        11
+           3       0.50      0.50      0.50         2
+
+    accuracy                           0.93       367
+   macro avg       0.53      0.52      0.53       367
+weighted avg       0.98      0.93      0.96       367
+
+
+--- 娣锋穯鐭╅樀 (Confusion Matrix) ---
+------------ Freeplane1.json ------------
+tokenizing: 15718it [01:20, 195.96it/s]
+
+--- 璇勪及鎸囨爣 ---
+鍑嗙‘鐜?(Accuracy)              : 93.62%
+鍔犳潈鏌ュ噯鐜?(Weighted Precision): 0.9778
+鍔犳潈鏌ュ叏鐜?(Weighted Recall)   : 0.9362
+鍔犳潈F1鍒嗘暟 (Weighted F1-score) : 0.9522
+--- 鍒嗙被鎶ュ憡 (Classification Report) ---
+              precision    recall  f1-score   support
+
+           0       1.00      0.94      0.97     15295
+           1       0.25      0.91      0.39       156
+           2       0.28      0.82      0.41       245
+           3       0.59      0.45      0.51        22
+
+    accuracy                           0.94     15718
+   macro avg       0.53      0.78      0.57     15718
+weighted avg       0.98      0.94      0.95     15718
+
+
+--- 娣锋穯鐭╅樀 (Confusion Matrix) ---
+------------ Nutch1.json ------------
+tokenizing: 3696it [00:25, 142.92it/s]
+
+--- 璇勪及鎸囨爣 ---
+鍑嗙‘鐜?(Accuracy)              : 86.01%
+鍔犳潈鏌ュ噯鐜?(Weighted Precision): 0.9742
+鍔犳潈鏌ュ叏鐜?(Weighted Recall)   : 0.8601
+鍔犳潈F1鍒嗘暟 (Weighted F1-score) : 0.9084
+--- 鍒嗙被鎶ュ憡 (Classification Report) ---
+              precision    recall  f1-score   support
+
+           0       1.00      0.86      0.93      3570
+           1       0.37      0.76      0.50       100
+           2       0.05      0.86      0.09        21
+           3       0.14      0.60      0.23         5
+
+    accuracy                           0.86      3696
+   macro avg       0.39      0.77      0.44      3696
+weighted avg       0.97      0.86      0.91      3696
+
+
+--- 娣锋穯鐭╅樀 (Confusion Matrix) ---
+
+Process finished with exit code 0
+

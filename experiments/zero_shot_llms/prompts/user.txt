@@ -1,0 +1,5 @@
+Classify the following Java method for the two target code smells. Return only the required JSON object.
+<method_source>
+{code}
+</method_source>
+

@@ -1,0 +1,55 @@
+{
+  "test_samples": 1887,
+  "labels": {
+    "0": "neither",
+    "1": "long_parameter_list_only",
+    "2": "long_method_only",
+    "3": "both"
+  },
+  "label_counts": {
+    "0": 682,
+    "1": 610,
+    "2": 466,
+    "3": 129
+  },
+  "input_view": "decoder_visible_487_code_tokens",
+  "truncated_test_samples": 393,
+  "sha256": {
+    "data/test_matched_decoder.jsonl": "46268697faff9eb80a124954c57e8e757b850496dbd3b99c830caa2b4071af1c",
+    "data/gold_test.jsonl": "3351bd021494d7c9a16506a80acbc18151412911d0da4678f6761a45bc057ac7",
+    "prompts/system.txt": "517839ca36598568d7ce705359a1a37c4699010401e847b947a2335ea0e8941c",
+    "prompts/user.txt": "8ac20b208406b500eb5cfb60e32aa95edc77aaf61f998baa541b82aca29d091c"
+  },
+  "prediction_sha256": {
+    "predictions/deepseekv4pro.csv": "7465b9aad5ff092e2f1be9ea0f8dda1ad7c74b56896b140883144b5225b639eb",
+    "predictions/gemini38flash.csv": "a7b3a32a0e66cbe00822d82f002365a63d003e134d2ec1982527af517df8a93b",
+    "predictions/gpt56sol.csv": "0317ceaf14fbee87526eb02dddc45e3eea86a1b747468343a14b47655a70f5d7",
+    "predictions/gpt6astra.csv": "d03ddbd83d6360ded764a4da8c48a780b1b9d68c84868f5d4568d3774ecbf6bf"
+  },
+  "models": {
+    "gpt-5.6-sol": {
+      "api": "responses",
+      "access_route": "responses_compatible_gateway",
+      "reasoning_effort": "medium",
+      "max_output_tokens": 8192
+    },
+    "gpt-6-astra": {
+      "api": "responses",
+      "access_route": "responses_compatible_gateway",
+      "reasoning_effort": "medium",
+      "max_output_tokens": 8192
+    },
+    "gemini-3.8-flash": {
+      "api": "responses",
+      "access_route": "responses_compatible_gateway",
+      "reasoning_effort": "medium",
+      "max_output_tokens": 8192
+    },
+    "deepseek-v4-pro-ga-260813": {
+      "api": "ark_chat_completions",
+      "access_route": "volcengine_ark",
+      "reasoning_effort": "high",
+      "max_output_tokens": 8192
+    }
+  }
+}
